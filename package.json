@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "packageManager": "pnpm@8.1.1",
   "description": "",
-  "author": "zzzZZZ1117 <zqj1130123899@gmail.com>",
   "license": "MIT",
+  "funding": "https://github.com/sponsors/zzzZZZ1117",
   "homepage": "https://github.com/zzzZZZ1117/vite-plugin-test-glob#readme",
   "repository": {
     "type": "git",
@@ -39,11 +39,15 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
+    "play": "vite playground",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "fast-glob": "^3.2.12"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",

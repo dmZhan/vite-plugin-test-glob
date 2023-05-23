@@ -1,8 +1,5 @@
 name: Release
 
-permissions:
-  contents: write
-
 on:
   push:
     tags:
@@ -15,16 +12,6 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-
-      - name: Set node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-          cache: pnpm
-
-      - run: npx changelogithub
+      - run: npx conventional-github-releaser -p angular
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.GITHUB_TOKEN}}

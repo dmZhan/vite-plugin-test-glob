@@ -1,27 +1,23 @@
 {
-  "name": "vite-plugin-glob",
+  "name": "vite-plugin-test-glob",
   "version": "0.3.2",
   "packageManager": "pnpm@7.0.0",
   "description": "The design experiment for import.meta.glob from Vite",
-  "homepage": "https://github.com/antfu/vite-plugin-glob#readme",
-  "bugs": {
-    "url": "https://github.com/antfu/vite-plugin-glob/issues"
-  },
   "license": "MIT",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "homepage": "https://github.com/zzzZZZ1117/vite-plugin-test-glob#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/vite-plugin-glob.git"
+    "url": "git+https://github.com/zzzZZZ1117/vite-plugin-test-glob.git"
   },
-  "funding": "https://github.com/sponsors/antfu",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/zzzZZZ1117/vite-plugin-test-glob/issues"
+  },
+  "sideEffects": false,
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs"
     },
     "./client": {
       "types": "./client.d.ts"
@@ -30,11 +26,13 @@
       "types": "./takeover.d.ts"
     }
   },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "*.ts"
   ],
-  "sideEffects": false,
   "scripts": {
     "build": "rimraf dist && unbuild",
     "dev": "unbuild --stub",

@@ -11,6 +11,6 @@
   "devDependencies": {
     "typescript": "^4.6.4",
     "vite": "^2.9.7",
-    "vite-plugin-glob": "workspace:*"
+    "vite-plugin-test-glob": "workspace:*"
   }
 }

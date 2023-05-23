@@ -1,7 +1,7 @@
-import { resolve } from 'path'
-import { fileURLToPath } from 'url'
+import { resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
-import GlobPlugin from 'vite-plugin-glob'
+import GlobPlugin from 'vite-plugin-test-glob'
 
 export default defineConfig({
   resolve: {

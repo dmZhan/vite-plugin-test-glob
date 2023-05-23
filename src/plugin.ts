@@ -33,7 +33,7 @@ export function importGlobPlugin(options: PluginOptions = {}): Plugin {
   }
 
   return {
-    name: 'vite-plugin-glob',
+    name: 'vite-plugin-test-glob',
     config() {
       return {
         server: {

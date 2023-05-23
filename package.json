@@ -13,6 +13,8 @@
     "url": "https://github.com/zzzZZZ1117/vite-plugin-test-glob/issues"
   },
   "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -26,17 +28,15 @@
       "types": "./takeover.d.ts"
     }
   },
-  "sideEffects": false,
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "*.ts"
   ],
+  "sideEffects": false,
   "scripts": {
     "build": "rimraf dist && unbuild",
     "dev": "unbuild --stub",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "play": "vite playground",
     "prepublishOnly": "nr build",
     "release": "bumpp --commit --push --tag && pnpm publish",

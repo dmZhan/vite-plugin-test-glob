@@ -1,9 +1,9 @@
 # DEPRECATED: This plugin has be [ported to back to Vite v3.0](https://github.com/vitejs/vite/pull/7537).
 ----
 
-# vite-plugin-test-glob
+# vite-plugin-glob
 
-[![NPM version](https://img.shields.io/npm/v/vite-plugin-test-glob?color=a1b858&label=)](https://www.npmjs.com/package/vite-plugin-test-glob)
+[![NPM version](https://img.shields.io/npm/v/vite-plugin-glob?color=a1b858&label=)](https://www.npmjs.com/package/vite-plugin-glob)
 
 The design experiment for [`import.meta.glob` from Vite](https://vitejs.dev/guide/features.html#glob-import).
 
@@ -45,13 +45,13 @@ Thus I propose to experiment with the `import.meta.glob` as an external plugin s
 ## Install
 
 ```bash
-npm i -D vite-plugin-test-glob
+npm i -D vite-plugin-glob
 ```
 
 ```ts
 // vite.config.ts
 import { defineConfig } from 'vite'
-import GlobPlugin from 'vite-plugin-test-glob'
+import GlobPlugin from 'vite-plugin-glob'
 
 export default defineConfig({
   plugins: [
@@ -192,7 +192,7 @@ The following features are in experiments, feedbacks are greatly welcome!
 
 Append fake `&lang.(ext)` when queries are specified, to preseve the file extension for following plugins to process.
 
-Learn more at [Discussions](https://github.com/zzzZZZ1117/vite-plugin-test-glob/pull/10)
+Learn more at [Discussions](https://github.com/antfu/vite-plugin-glob/pull/10)
 
 This is disabled by default since v0.3.0. To enable it, pass `restoreQueryExtension: true` to plugin options.
 
@@ -206,9 +206,9 @@ Add to `tsconfig.json`
 {
   "compilerOptions": {
     "types": [
-      "vite-plugin-test-glob/client",
+      "vite-plugin-glob/client",
       // with takeover enabled
-      // "vite-plugin-test-glob/takeover"
+      // "vite-plugin-glob/takeover"
     ]
   }
 }
@@ -225,6 +225,14 @@ interface SomeModule {
 import.meta.importGlob<SomeModule>('./dir/*.js')
 ```
 
+## Sponsors
+
+<p align="center">
+  <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
+    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
+  </a>
+</p>
+
 ## License
 
-[MIT](./LICENSE) License © 2021 [zzzZZZ1117](https://github.com/zzzZZZ1117)
+[MIT](./LICENSE) License © 2021 [Anthony Fu](https://github.com/antfu)

@@ -1,25 +1,27 @@
 {
-  "name": "vite-plugin-test-glob",
+  "name": "vite-plugin-glob",
   "version": "0.3.2",
   "packageManager": "pnpm@7.0.0",
   "description": "The design experiment for import.meta.glob from Vite",
+  "homepage": "https://github.com/antfu/vite-plugin-glob#readme",
+  "bugs": {
+    "url": "https://github.com/antfu/vite-plugin-glob/issues"
+  },
   "license": "MIT",
-  "homepage": "https://github.com/zzzZZZ1117/vite-plugin-test-glob#readme",
+  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zzzZZZ1117/vite-plugin-test-glob.git"
+    "url": "git+https://github.com/antfu/vite-plugin-glob.git"
   },
-  "bugs": {
-    "url": "https://github.com/zzzZZZ1117/vite-plugin-test-glob/issues"
-  },
+  "funding": "https://github.com/sponsors/antfu",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
     },
     "./client": {
       "types": "./client.d.ts"
